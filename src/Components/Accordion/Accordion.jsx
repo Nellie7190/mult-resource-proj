@@ -6,7 +6,7 @@ const Accordion = () => {
 
   function handleSingleSel(id, item) {
     // console.log(item.answer)
-    setSelected(id)
+    setSelected(id === selected ? null : id)
   }
 
   return (
