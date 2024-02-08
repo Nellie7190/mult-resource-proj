@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import data from './data'
+import './styles.css'
 
 const Accordion = () => {
   const [ selected, setSelected ] = useState(null)
@@ -25,7 +26,7 @@ const Accordion = () => {
             </h3>
             <span>+</span> 
             {
-              selected === item.id && selected ? <div>{item.answer}</div> : null
+              selected === item.id && selected ? <div className='content' >{item.answer}</div> : null
             }
           </div>
         </div>
