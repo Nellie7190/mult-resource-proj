@@ -4,37 +4,35 @@ import "./styles.css";
 
 const Accordion = () => {
   const [selected, setSelected] = useState([]);
-  const [enMultSel, setEnMultSel] = useState([])
+  // const [multSel, setMultSel] = useState([])
   const [multButton, setMultButton] = useState(false)
   
 
   function handleSingleSel(id) {
-    // console.log(item.answer)
     setSelected(id === selected ? null : id);
   }
 
   function handleButtonChange() {
     let oppBtn  = multButton
-    console.log(!oppBtn)
+    // multButton ? setSelected([]) : null
+    if (multButton) {
+      setSelected([])
+    }
     return setMultButton(!oppBtn)
   }
 
-  // function()
-
   function handleMultSel(id) {
-    console.log(id)
     let selCopy = selected
     setSelected(id === selected ? null : [...selCopy, id]);
-    console.log(selected)
-    //  let multSels = selected
-    //  console.log(`This is ${multSels}`)
-    //  multSels.push(id)
-    //  console.log(`This is ${multSels}`)
-    // setEnMultSel(multSels)
   }
+
   return (
     <div className="wrapper">
-      <button onClick={() => handleButtonChange()}>Enable MultiSelection</button>
+      <button onClick={() => handleButtonChange()}>
+        {
+          multButton ? `Disable MultiSelection` : `Enable MultiSelection`
+        }
+      </button>
       <div className="accordion">
         {
           // Just in case there is no data
@@ -42,7 +40,13 @@ const Accordion = () => {
             data.map((item) => (
               <div className="item" key={item.id}>
                 {/* anon funct so it doesn't invoke on pageload */}
-                <div className="title" onClick={() => handleMultSel(item.id)}>
+                <div 
+                className="title" 
+                onClick={
+                  multButton ?
+                  () => handleMultSel(item.id)
+                  :
+                  () => handleSingleSel(item.id)}>
                   <h3>
                     {item.question}
                     {/* want to change below to be expandable and collapsible */}
