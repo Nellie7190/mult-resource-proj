@@ -49,12 +49,13 @@ const Accordion = () => {
                   () => handleSingleSel(item.id)}>
                   <h3>
                     {item.question}
-                    {/* want to change below to be expandable and collapsible */}
                   </h3>
-                  <span>+</span>
-                  {selected.includes(item.id) ? (
+                  { selected !== null && selected.includes(item.id) ? (
+                    <>
+                    <span>-</span>
                     <div className="content">{item.answer}</div>
-                  ) : null}
+                    </>
+                  ) : <span>+</span>}
                 </div>
               </div>
             ))
