@@ -17,11 +17,11 @@ const data = [
     {
         id : '4',
         question: 'Why use an accordion component?',
-        answer: {
+        answer: 'So many reasons!'/*{
             example: 'For a better spacial aesthetic',
             example: 'To save space for less scrolling, and allow the user to only see what they want to see',
             example: "Because it's just cool!"
-        }
+        }*/
     },
     
 ]

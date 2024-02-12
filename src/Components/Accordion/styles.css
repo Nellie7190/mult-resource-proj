@@ -17,13 +17,14 @@
 }
 
 .item {
+    /* display: flex; */
     background: lightblue;
     margin-bottom: 10px;
     padding: 10px 20px;
 }
 
 .title {
-    /* display: flex; */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     cursor: pointer;

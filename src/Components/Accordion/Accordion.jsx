@@ -9,8 +9,9 @@ const Accordion = () => {
   
 
   function handleSingleSel(id) {
-    setSelected(id === selected ? null : id);
+    setSelected(id === selected ? setSelected([]) : id);
   }
+  console.log('this is how many is selected', selected.length)
 
   function handleButtonChange() {
     let oppBtn  = multButton
@@ -50,13 +51,14 @@ const Accordion = () => {
                   <h3>
                     {item.question}
                   </h3>
-                  { selected !== null && selected.includes(item.id) ? (
+                </div>
+                {console.log('this is which id is selected', selected)}
+                  { selected === item.id || selected.includes(item.id) ? (
                     <>
                     <span>-</span>
                     <div className="content">{item.answer}</div>
                     </>
                   ) : <span>+</span>}
-                </div>
               </div>
             ))
           ) : (
