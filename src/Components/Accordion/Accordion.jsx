@@ -9,7 +9,8 @@ const Accordion = () => {
   
 
   function handleSingleSel(id) {
-    setSelected(id === selected ? setSelected([]) : id);
+    console.log(id === selected)
+    setSelected(id === selected ? [] : id);
   }
   console.log('this is how many is selected', selected.length)
 
