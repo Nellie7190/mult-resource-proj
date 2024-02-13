@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 
 const ColorGenerator = () => {
-    const [ bgColor, setBgColor ] = useState(null)
+    const [ bgColor, setBgColor ] = useState('white')
+    const [ typeColor, setTypeColor ] = useState('Type of Color')
+    const [ colorName, setColorName ] = useState('Specific Color')
 
     function getrandomColor() {
         return
@@ -14,8 +16,9 @@ const ColorGenerator = () => {
         let bgColor = `rgb(${x}, ${y}, ${z})`
         console.log(bgColor)
         document.body.style.backgroundColor = bgColor;
-        document.querySelector('h3').textContent = "RGB Color"
-        document.querySelector('h1').textContent = bgColor
+        setTypeColor("RGB Color")
+        // document.querySelector('h3').textContent = "RGB Color"
+        setColorName(bgColor)
     }
 
     // function hexColor() {
@@ -37,8 +40,8 @@ const ColorGenerator = () => {
         <button onClick={rgbColor}>Create RGB Color</button>
         <button onClick={hexColor}> Create HEX Color</button>
         <button onClick={randomColor}>Generate Random Color</button>
-        <h3>Type of Color</h3>
-        <h1>Specific Color</h1>
+        <h3>{typeColor}</h3>
+        <h1>{colorName}</h1>
     </>
   )
 }
