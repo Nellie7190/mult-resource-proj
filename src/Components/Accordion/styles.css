@@ -17,10 +17,13 @@
 }
 
 .item {
-    /* display: flex; */
     background: lightblue;
     margin-bottom: 10px;
     padding: 10px 20px;
+}
+
+.item span {
+    gap: 100px;
 }
 
 .title {

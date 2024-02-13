@@ -3,9 +3,9 @@ import data from "./data";
 import "./styles.css";
 
 const Accordion = () => {
-  useEffect(() => {
-    //Runs only on the first render
-  }, []);
+  // useEffect(() => {
+  //   //Runs only on the first render
+  // }, []);
 
   const [selected, setSelected] = useState([]);
   // const [multSel, setMultSel] = useState([])
