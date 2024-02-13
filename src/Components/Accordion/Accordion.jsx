@@ -13,7 +13,8 @@ const Accordion = () => {
   
 
   function handleSingleSel(id) {
-    setSelected(id === selected ? [] : [id]);
+    // setSelected(id === selected ? [] : [id]);
+    setSelected(selected.includes(id) ? [] : [id]);
   }
   console.log('this is how many is selected', selected.length)
 
