@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const ColorGenerator = () => {
-    const [ color, setColor ] = useState(null)
+    const [ bgColor, setBgColor ] = useState(null)
 
     function getrandomColor() {
         return
@@ -18,9 +18,15 @@ const ColorGenerator = () => {
         document.querySelector('h1').textContent = bgColor
     }
 
-    function hexColor() {
-        alert('hex clicked!')
-    }
+    // function hexColor() {
+    //     alert('hex clicked!')
+    // }
+    const hexColor = () => {
+        const hColor = Math.floor(Math.random()*16777215).toString(16);
+        document.body.style.backgroundColor = "#" + hColor;
+        document.querySelector('h3').textContent = "HEX Color"
+        document.querySelector('h1').textContent = hColor
+      }
 
     function randomColor() {
         alert('random color clicked!')
