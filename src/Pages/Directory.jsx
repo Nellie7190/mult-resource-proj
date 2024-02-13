@@ -13,6 +13,9 @@ const Directory = () => {
             <li>
                 <Link to="/accordion">Accordion</Link>
             </li>
+            <li>
+                <Link to="/color-generator">Color Generator</Link>
+            </li>
       </ul>
     </>
   )
