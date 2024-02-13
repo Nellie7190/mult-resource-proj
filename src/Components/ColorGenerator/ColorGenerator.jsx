@@ -27,8 +27,8 @@ const ColorGenerator = () => {
     const hexColor = () => {
         const hColor = Math.floor(Math.random()*16777215).toString(16);
         document.body.style.backgroundColor = "#" + hColor;
-        document.querySelector('h3').textContent = "HEX Color"
-        document.querySelector('h1').textContent = hColor
+        setTypeColor("HEX Color")
+        setColorName(hColor)
       }
 
     function randomColor() {
