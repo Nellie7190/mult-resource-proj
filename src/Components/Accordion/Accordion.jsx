@@ -1,16 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "./data";
 import "./styles.css";
 
 const Accordion = () => {
+  useEffect(() => {
+    //Runs only on the first render
+  }, []);
+
   const [selected, setSelected] = useState([]);
   // const [multSel, setMultSel] = useState([])
   const [multButton, setMultButton] = useState(false)
   
 
   function handleSingleSel(id) {
-    console.log(id === selected)
-    setSelected(id === selected ? [] : id);
+    setSelected(id === selected ? [] : [id]);
   }
   console.log('this is how many is selected', selected.length)
 
@@ -24,9 +27,18 @@ const Accordion = () => {
   }
 
   function handleMultSel(id) {
-    let selCopy = selected
-    setSelected(id === selected ? null : [...selCopy, id]);
+    console.log(selected)
+    // if selected id is not already expanded, do so
+    if (!selected.includes(id)) {
+      return setSelected([...selected, id]);
+    } else {
+      console.log(selected, selected.indexOf(id))
+      let copiedArray = selected
+      copiedArray.splice(selected.indexOf(id), 1)
+      return setSelected([...copiedArray])
+    }
   }
+  console.log(selected)
 
   return (
     <div className="wrapper">
@@ -53,7 +65,6 @@ const Accordion = () => {
                     {item.question}
                   </h3>
                 </div>
-                {console.log('this is which id is selected', selected)}
                   { selected === item.id || selected.includes(item.id) ? (
                     <>
                     <span>-</span>
