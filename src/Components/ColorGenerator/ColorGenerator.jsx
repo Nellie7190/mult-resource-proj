@@ -24,9 +24,21 @@ const ColorGenerator = () => {
     // }
 
     const hexColor = () => {
-        const hColor = Math.floor(Math.random()*16777215).toString(16);
-        document.body.style.backgroundColor = "#" + hColor;
+        // const hColor = Math.floor(Math.random()*16777215).toString(16);
+        // document.body.style.backgroundColor = "#" + hColor;
+        // setTypeColor("HEX Color")
+        // setColorName(hColor)
+        const options = ['A', 'B', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        const hC1 = Math.floor(Math.random()*options.length)
+        const hC2 = Math.floor(Math.random()*options.length)
+        const hC3 = Math.floor(Math.random()*options.length)
+        const hC4 = Math.floor(Math.random()*options.length)
+        const hC5 = Math.floor(Math.random()*options.length)
+        const hC6 = Math.floor(Math.random()*options.length)
+        console.log(hC1)
         setTypeColor("HEX Color")
+        const hColor = `${options[hC1]}${options[hC2]}${options[hC3]}${options[hC4]}${options[hC5]}${options[hC6]}`
+        document.body.style.backgroundColor = "#" + hColor;
         setColorName(hColor)
       }
 
