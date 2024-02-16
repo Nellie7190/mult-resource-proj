@@ -14,16 +14,15 @@ const ColorGenerator = () => {
         let y = Math.floor(Math.random() * 256)
         let z = Math.floor(Math.random() * 256)
         let bgColor = `rgb(${x}, ${y}, ${z})`
-        console.log(bgColor)
         document.body.style.backgroundColor = bgColor;
         setTypeColor("RGB Color")
-        // document.querySelector('h3').textContent = "RGB Color"
         setColorName(bgColor)
     }
 
     // function hexColor() {
     //     alert('hex clicked!')
     // }
+
     const hexColor = () => {
         const hColor = Math.floor(Math.random()*16777215).toString(16);
         document.body.style.backgroundColor = "#" + hColor;
