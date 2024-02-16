@@ -31,7 +31,9 @@ const ColorGenerator = () => {
       }
 
     function randomColor() {
-        alert('random color clicked!')
+        const options = [rgbColor, hexColor]
+        let randomChosen = Math.floor(Math.random()*options.length)
+        return options[randomChosen]()
     }
 
   return (
