@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import data from "./data";
 import "./styles.css";
+import HomeButton from "../HomeButton";
 
 const Accordion = () => {
   // useEffect(() => {
@@ -43,6 +44,7 @@ const Accordion = () => {
 
   return (
     <div className="wrapper">
+      < HomeButton />
       <button onClick={() => handleButtonChange()}>
         {
           multButton ? `Disable MultiSelection` : `Enable MultiSelection`

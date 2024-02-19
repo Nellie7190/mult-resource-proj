@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import HomeButton from '../HomeButton'
 
 const ColorGenerator = () => {
     const [ bgColor, setBgColor ] = useState('white')
     const [ typeColor, setTypeColor ] = useState('Type of Color')
     const [ colorName, setColorName ] = useState('Specific Color')
 
-    function getrandomColor() {
-        return
-    }
-    
     function rgbColor() {
         let x = Math.floor(Math.random() * 256)
         let y = Math.floor(Math.random() * 256)
@@ -19,15 +17,11 @@ const ColorGenerator = () => {
         setColorName(bgColor)
     }
 
-    // function hexColor() {
-    //     alert('hex clicked!')
-    // }
-
     function hexColorGenerator(options) {
         return Math.floor(Math.random()*options.length)
     }
 
-    const hexColor = () => {
+    function hexColor() {
         const options = ['A', 'B', 'D', 'E', 'F', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         let hColor = '#'
         for (let i = 0; i < 6; i++) {
@@ -56,6 +50,8 @@ const ColorGenerator = () => {
 
   return (
     <>
+        <HomeButton />
+        < hr />
         <button onClick={rgbColor}>Create RGB Color</button>
         <button onClick={hexColor}> Create HEX Color</button>
         <button onClick={randomColor}>Generate Random Color</button>
