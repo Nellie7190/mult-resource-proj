@@ -19,6 +19,14 @@ const StarRating = ({starTotal = 5}) => {
     }
     console.log(`THIS IS THE CURRENT RATING ${rating}`)
 
+    /////// Future Hover functions for next step
+    // function handleMouseMove(index) {
+    //     return
+    // }
+
+    // function handleMouseLeave(index) {
+    //     return
+    // }
   return (
     <>
         <HomeButton />
@@ -29,6 +37,9 @@ const StarRating = ({starTotal = 5}) => {
                     <FaStar 
                         key={index}
                         onClick={() => handleClick(index)}
+                        // Want to add mouse hover in this app next
+                        // onMouseMove={() => handleMouseMove(index)}
+                        // onMouseLeave={() => handleMouseLeave(index)}
                         size={40}
                         className={rating.includes(index) ? 'active' : 'inactive'}
                     />
