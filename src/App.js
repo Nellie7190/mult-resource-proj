@@ -13,7 +13,7 @@ function App() {
         <Route path='/' element={<Directory />}></Route>
         < Route path= "/accordion" element={< Accordion />} />
         < Route path= "/color-generator" element={< ColorGenerator />} />
-        < Route path= "/star-rating" element={< StarRating />} />
+        < Route path= "/star-rating" element={< StarRating starNum={10}/>} />
       </Routes>
     </>
   );

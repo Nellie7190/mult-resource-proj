@@ -1,8 +1,18 @@
 import React from 'react'
+// using react-icons
+import { FaStar } from 'react-icons/fa'
 
-const StarRating = () => {
+// default if starNum not passed through props
+const StarRating = ({starNum = 5}) => {
+    console.log(starNum)
   return (
-<div>This is where StarRating lives!</div>
+<div> 
+    {
+        [...Array(starNum)].map((_, index) =>  
+            <FaStar key={index}/>
+        )
+    }
+</div>
   )
 }
 
