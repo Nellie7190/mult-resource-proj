@@ -1,13 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState} from "react";
 import data from "./data";
 import "./styles.css";
 import HomeButton from "../HomeButton";
 
 const Accordion = () => {
-  // useEffect(() => {
-  //   //Runs only on the first render
-  // }, []);
-
   const [selected, setSelected] = useState([]);
   // const [multSel, setMultSel] = useState([])
   const [multButton, setMultButton] = useState(false)
