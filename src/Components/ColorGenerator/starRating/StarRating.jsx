@@ -45,6 +45,7 @@ const StarRating = ({starTotal = 5}) => {
                     />
                 )
             }
+            <h1>{rating.length} stars</h1>
         </div>
     </>
   )
