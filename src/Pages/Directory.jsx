@@ -16,6 +16,9 @@ const Directory = () => {
             <li>
                 <Link to="/star-rating">Star Rating</Link>
             </li>
+            <li>
+                <Link to="/image-slider">Image Slider</Link>
+            </li>
       </ul>
     </>
   )
