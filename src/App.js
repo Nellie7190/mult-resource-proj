@@ -3,7 +3,7 @@ import { Route, Routes, Link } from 'react-router-dom';
 import Accordion from './Components/Accordion/Accordion';
 import Directory from './Pages/Directory';
 import ColorGenerator from './Components/ColorGenerator/ColorGenerator';
-import StarRating from './Components/ColorGenerator/starRating/StarRating';
+import StarRating from './Components/StarRating/StarRating';
 
 function App() {
   // FIX BACKGROUND COLOR TO BE BACK WHITE WHEN LEAVING RANDOM COLOR PAGE

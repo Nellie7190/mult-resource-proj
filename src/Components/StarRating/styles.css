@@ -1,7 +1,7 @@
 .active {
     color: yellow;
 }
-div {
+.star-component {
     text-align: center;
     padding: 20px;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-// using react-icons
+// installed react-icons
 import { FaStar } from 'react-icons/fa'
-import HomeButton from '../../HomeButton'
+import HomeButton from '../HomeButton'
 import './styles.css'
 
 // default if starNum not passed through props
@@ -28,9 +28,9 @@ const StarRating = ({starTotal = 5}) => {
     //     return
     // }
   return (
-    <>
+    <div>
         <HomeButton />
-        <div> 
+        <div className='star-component'> 
             
             {
                 [...Array(starTotal)].map((_, index) =>  
@@ -47,7 +47,7 @@ const StarRating = ({starTotal = 5}) => {
             }
             <h1>{rating.length} stars</h1>
         </div>
-    </>
+    </div>
   )
 }
 
