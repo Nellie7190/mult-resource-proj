@@ -1,12 +1,16 @@
-import React from 'react'
-import './data'
-import { SliderData } from './data'
+import React from "react";
+import { SliderData } from "./data";
+import "./styles.css";
 
 const ImageSlider = () => {
-    console.log(SliderData)
+  console.log(SliderData);
   return (
-    <div>ImageSlider</div>
-  )
-}
+    <div>
+      {SliderData.map((img, idx) => (
+        <img src={img.image} alt={img.image} className="images"/>
+      ))}
+    </div>
+  );
+};
 
-export default ImageSlider
+export default ImageSlider;
